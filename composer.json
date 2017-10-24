@@ -1,6 +1,5 @@
 {
     "name": "carizy/geolocation-bundle",
-    "type": "class",
     "description": "GeolocationBundle",
     "require": {
         "php": ">=5.3.0"
