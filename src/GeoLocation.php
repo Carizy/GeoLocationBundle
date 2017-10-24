@@ -1,5 +1,6 @@
 <?php
 namespace Carizy\GeolocationBundle;
+
 /**
  * <p>Represents a point on the surface of a sphere. (The Earth is almost
  * spherical.)</p>
