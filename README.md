@@ -7,7 +7,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require carizy/geolocation-bundle
+$ composer require carizy/geo-location-bundle
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -21,7 +21,7 @@ You also need to have the repository inside your global composer.json:
   "repositories" : [
       {
           "type": "git",
-          "url": "https://github.com/Carizy/GeolocationBundle.git"
+          "url": "https://github.com/Carizy/GeoLocationBundle.git"
       } 
   ]
 }
@@ -46,7 +46,7 @@ class AppKernel extends Kernel
         $bundles = array(
             // ...
 
-            new Carizy\GeolocationBundle\GeolocationBundle(),
+            new Carizy\GeolocationBundle\GeoLocationBundle(),
         );
 
         // ...

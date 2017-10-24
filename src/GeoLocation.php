@@ -1,6 +1,5 @@
 <?php
-namespace Carizy\GeolocationBundle;
-
+namespace Carizy\GeoLocationBundle;
 /**
  * <p>Represents a point on the surface of a sphere. (The Earth is almost
  * spherical.)</p>
@@ -33,8 +32,6 @@ class GeoLocation {
 	protected static $MAX_LAT;  //  PI/2
 	protected static $MIN_LON;  // -PI
 	protected static $MAX_LON;  //  PI
-
-    private $google_api_key; // Google API key
 
     public function __construct() {
 		self::$MIN_LAT = deg2rad(-90);   // -PI/2
@@ -219,13 +216,14 @@ class GeoLocation {
 	/**
 	 *  Retrieves Geocoding information from Google
 	 *  eg. $response = GeoLocation::getGeocodeFromGoogle($location);
-	 *		$latitude = $response->results[0]->geometry->location->lng;
-	 *	    $longitude = $response->results[0]->geometry->location->lng;
+	 *	$latitude = $response->results[0]->geometry->location->lng;
+	 *	$longitude = $response->results[0]->geometry->location->lng;
 	 *	@param string $location address, city, state, etc.
+	 *	@param string $google_api_key
 	 *	@return \stdClass
 	 */
-	public function getGeocodeFromGoogle($location) {
-		$url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($location).'&sensor=false&key=' . $this->google_api_key;
+	public function getGeocodeFromGoogle($location, $google_api_key) {
+		$url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($location).'&sensor=false&key=' . $google_api_key;
 		$ch = curl_init();
 	    curl_setopt($ch, CURLOPT_URL,$url);
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -238,4 +236,3 @@ class GeoLocation {
 		return $km * 0.621371192237334;
 	}
 }
-
