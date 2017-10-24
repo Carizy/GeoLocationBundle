@@ -13,8 +13,8 @@ namespace Carizy\GeoLocationBundle;
  * 
  * Many thanks to the original author: Jan Philip Matuschek
  *
- * @author Anthony Martin
- * @version November 21 2012
+ * @author Jerome Daurat
+ * @version October 24 2017
  */
 class GeoLocation {
 
