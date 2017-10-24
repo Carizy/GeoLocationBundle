@@ -1,6 +1,5 @@
 Installation
 ============
-
 Step 1: Download the Bundle
 ---------------------------
 Open a command console, enter your project directory and execute the
