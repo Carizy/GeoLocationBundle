@@ -8,8 +8,7 @@
     "version": "1.0.0",
     "autoload": {
         "psr-0": {
-            "Carizy\\GeoLocationBundle": ""
+            "Carizy": "src/"
         }
-    },
-    "target-dir" : "Carizy/GeoLocationBundle"
+    }
 }
